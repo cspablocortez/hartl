@@ -4,11 +4,16 @@
 
 <div id="microposts">
   <% @microposts.each do |micropost| %>
-    <%= render micropost %>
-    <p>
-      <%= link_to "Show this micropost", micropost %>
-    </p>
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <%= micropost.content %>
+          <%= link_to "Source", micropost, :style => "float: right" %>
+        </div>
+      </div>
+    </div>
   <% end %>
+
 </div>
 
-<%= link_to "New micropost", new_micropost_path %>
+<%= link_to "New post", new_micropost_path %>
