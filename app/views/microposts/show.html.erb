@@ -1,16 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
   <div class="row">
-    <div class="col s12 m6">
       <div class="card">
+      
         <div class="card-content">
           <span class="card-title">Post</span>
-          <p><%= render @micropost %></p>
+          <%= render @micropost %>
         </div>
+
         <div class="card-action">
-          <%= link_to "Edit this micropost", edit_micropost_path(@micropost) %>
-          <%= link_to "Back to microposts", microposts_path %>
+          <%= link_to "Edit", edit_micropost_path(@micropost) %>
         </div>
-      </div>
+
     </div>
   </div>
+
+
+  <%= link_to "Back to microposts", microposts_path %>

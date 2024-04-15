@@ -1,13 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
+
+<h4>Profile Info</h4>
+
 <%= render @user %>
-<div class="microposts">
-  <% @user.microposts.each do |mp| %>
-    <p>
-      <%= mp.content %>
-      <%= link_to "(source)", mp %>
-    </p>
-<% end %>
+
+<hr>
+
+<h5>Microposts</h5>
+
+<div id="microposts">
+  <% @user.microposts.each do |micropost| %>
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <%= micropost.content %>
+          
+          <%= link_to "(Source)", micropost, :style => "float: right" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 
